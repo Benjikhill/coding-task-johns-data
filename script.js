@@ -12,8 +12,9 @@ function fullName() {
 }
 
 function changeJohnsData(propName, propValue) {
-  johnsData[propName] = propValue;
-  if (propName !== propValue) {
+  if (johnsData[propName]) {
+    johnsData[propName] = propValue;
+  } else {
     return console.log(
       "Sorry the passed in argument doesn't exists as a property in the johnsData object"
     );
